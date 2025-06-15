@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+.profilePicture {
+    width: 250px;
+    height: 250px;
+    margin-right: 15px;
+}
+
+.bannerContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    animation: fall;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.sideContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.textContainer{
+    display: block;
+    text-align: left;
+    font-family: "Quicksand", sans-serif;
+}
+
+.textContainer > p {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.textContainer > h1 {
+    margin: 0px 0px 15px 0px;
+}
+
+@keyframes fall {
+    0% {
+        opacity: 30%;
+        transform: translateY(-40px);
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .bannerContainer {
+        flex-direction: column;
+    }
+    .textContainer{
+        text-align: center
+    }
+    .profilePicture {
+        margin-right: 0;
+    }
+    .sideContainer{
+        align-items: center;
+    }
+}
+

@@ -1,0 +1,8 @@
+.iconContainer{
+    display: flex;
+    gap: 15px;
+}
+
+.icon:hover{
+    scale: 1.05
+}
