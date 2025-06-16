@@ -2,7 +2,9 @@
     display: flex;
     gap: 15px;
 }
-
+.icon {
+    transition: 0.2s
+}
 .icon:hover{
     scale: 1.05
 }

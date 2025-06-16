@@ -8,10 +8,12 @@
 .bannerContainer {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     animation: fall;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    height: 100vh;
 }
 
 .sideContainer{

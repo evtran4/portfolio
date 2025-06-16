@@ -2,13 +2,18 @@ import "./Experience.css";
 
 interface CardContentProps {
     opened: boolean;
-    // children: React.ReactNode;
+    content: {
+        text:   string[]
+        images: string[]
+    }
 }
 
-export default function CardContent({ opened }: CardContentProps) {
+export default function CardContent({ opened, content}: CardContentProps) {
     return (
-        <div className={`card-details ${opened ? "open" : ""}`}>
-            <p>HIII</p>
+        <div className={`card-content ${opened ? "open" : ""}`}>
+            {content.text.map((text)=>(
+                <p>{text}</p>
+            ))}
         </div>
     );
 }

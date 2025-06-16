@@ -1,10 +1,15 @@
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
 .card {
     display: block;
     background-color: white;
     width: 100%;
     box-sizing: border-box;
     border-radius: 20px;
-    padding:25px;
+    padding: 25px;
 }
 
 .header {
@@ -12,12 +17,22 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    height: 100%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
 
+.descriptionContainer {
+    text-align: left;
+}
+
+.descriptionContainer > p {
+    margin: 0px 0px 5px 0px;
+    color: gray;
+}
+
 .cardImage {
-    border: 4px rgb(220, 220, 220) solid;
+    border: 4px rgb(204, 204, 204) solid;
     width: 100px;
     height: 100px;
     margin-right: 15px;
@@ -33,15 +48,18 @@
     align-items: center;
 }
 
-.card-details {
+.card-content {
     max-height: 0;
+    margin-top: 15px;
     overflow: hidden;
     transition: max-height 0.4s ease, padding 0.3s ease;
     background-color: #f9f9f9;
     padding: 0 20px;
+    text-align: left;
+    border-radius: 15px;
 }
 
-.card-details.open {
+.card-content.open {
     max-height: 500px; 
     padding: 20px;
 }
