@@ -2,10 +2,14 @@ import ExperienceCard from "./ExperienceCard";
 import ihsIcon from '../../../public/IHS_Icon.webp'
 import { experience } from '../../en'
 
-export default function Experience() {
+interface ExperienceProps {
+  refProp: React.Ref<HTMLDivElement>;
+}
+
+export default function Experience({refProp}: ExperienceProps) {
     return (
         <>
-            <h1>Experience</h1>
+            <h1 ref = {refProp}>Experience</h1>
             <div className = "cardsContainer">
                 {Object.keys(experience).map((name) => (
                     <ExperienceCard

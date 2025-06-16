@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+.aboutMeText {
+    font-family:'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+}
+
+.polariodText {
+  font-family: "Permanent Marker", cursive;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  text-align: center; /* optional, for aesthetics */
+}
+.polariodGallary {
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: -10px;
+}
+
+.polariod {
+  width: 260px;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition:  0.3s;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.polariod:hover {
+  scale: 1.02;
+  z-index: 3;
+}
+
+.polariod img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: 8px solid white;
+  box-shadow: inset 0 0 0 1px #ddd;
+}
+
+.polariodText {
+  font-family: "Permanent Marker", cursive;
+  margin-top: 12px;
+  font-size: 16px;
+  color: #333;
+  text-align: center;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
