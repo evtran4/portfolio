@@ -14,11 +14,12 @@ import vue from "../../../public/vue.png"
 import node from "../../../public/nodejs.png"
 import gcp from "../../../public/gcp.png"
 import firebase from "../../../public/firebase.png"
+import mongodb from "../../../public/mongo.png"
 import postgresql from "../../../public/postgresql.webp"
 import tailwind from "../../../public/tailwind.svg"
 import DownArrow from "@mui/icons-material/ExpandMoreRounded"
 import UpArrow from "@mui/icons-material/ExpandLessRounded"
-import type Icon from "../../types";
+import type { Icon } from "../../types";
 import { useState } from "react";
 
 
@@ -102,6 +103,10 @@ export default function CardHeader({tools, title, image, opened, date}: CardHead
                 imagePath = tailwind
                 link = "https://v3.tailwindcss.com/"
             break;
+            case "MongoDB":
+                imagePath = mongodb
+                link = "https://www.mongodb.com/"
+            break;
             default:
             imagePath = "";
             link = "#";
@@ -121,14 +126,16 @@ export default function CardHeader({tools, title, image, opened, date}: CardHead
                     <IconGroup size={30} icons={icons}></IconGroup>
                 </div>
             </div>
-            <DownArrow 
-                sx={{
-                    fontSize: "60px", 
-                    transition: "0.5s", 
-                    transform: (opened ? "rotate(180deg)": "none"), 
-                    '&:hover': {transform: opened ? "rotate(180deg) translateY(5px)": "rotate(0deg) translateY(5px)",},
-                }}
-            />      
+            <div className="right">
+                <DownArrow 
+                    sx={{
+                        fontSize: "60px", 
+                        transition: "0.5s", 
+                        transform: (opened ? "rotate(180deg)": "none"), 
+                        '&:hover': {transform: opened ? "rotate(180deg) translateY(5px)": "rotate(0deg) translateY(5px)",},
+                    }}
+                />   
+            </div>   
         </div>
     )
 }

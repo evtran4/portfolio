@@ -1,0 +1,26 @@
+.educationContainer {
+    display: flex;
+    width: 100%;
+    gap: 6%;
+}
+
+.leftText {
+    display: flex;
+    flex-direction: column;
+    width: 47%;
+}
+
+.rightImages{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 47%;
+}
+
+.galleryImage {
+    max-width: 400px;
+    object-fit: contain;
+    height: auto;
+}

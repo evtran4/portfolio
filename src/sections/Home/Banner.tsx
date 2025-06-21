@@ -1,7 +1,7 @@
 import './Home.css'
 import profilePicture from '../../../public/profile_picture_2-modified.png'
 import IconGroup from '../../components/IconGroup'
-import type Icon from '../../types'
+import type { Icon } from '../../types'
 import linkedInIcon from '../../../public/linkedinIcon.svg'
 import gmailIcon from '../../../public/gmailIcon.svg'
 import githubIcon from '../../../public/githubIcon.svg'
@@ -14,6 +14,8 @@ const links: Icon[] = [
 export default function Banner () {
     return (
         <div className = "bannerContainer">
+            {/* <img className = "backgroundImage" src="/vinyl.png"></img> */}
+            {/* <img className = "centerLabel" src="/center_label.png"></img> */}
             <img className = "profilePicture" src = {profilePicture}></img>
             <div className = "sideContainer">
                 <div className = "textContainer">

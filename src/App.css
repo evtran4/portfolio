@@ -1,12 +1,10 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.spaContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
 }
-

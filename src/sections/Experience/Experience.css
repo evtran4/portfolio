@@ -68,3 +68,17 @@
     max-height: 500px; 
     padding: 20px;
 }
+
+@media screen and (max-width: 850px){
+    .header{
+        flex-direction: column;
+    }
+    .right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .open {
+        overflow-y: scroll;
+    }
+}

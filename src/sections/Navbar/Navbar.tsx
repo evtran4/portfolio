@@ -8,25 +8,42 @@ interface NavBarProps {
 
 const tabs: Tab[] = [
     {
+        name: "Education",
+        element: "educationHeader"
+    },
+    {
         name: "Experience",
         element: "experienceHeader"
     },
     {
+        name: "Projects",
+        element: "projectsHeader"
+    },
+    {
         name: "About",
         element: "aboutHeader"
+    },
+    {
+        name: "Resume",
+        element: "resumeHeader"
     }
 ]
 export default function NavBar({sections}: NavBarProps) {
     const [activeSection, setActiveSection] = useState<string>("");
     const scrollToSection = (element: string) => {
-        sections[element as keyof typeof sections]?.current?.scrollIntoView({ behavior: 'smooth' });
+    const ref = sections[element as keyof typeof sections]?.current;
+    if (ref) {
+        const yOffset = -60; 
+        const y = ref.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
     }
+    };
 
     const isInView = (element: string) => {
         const ref = sections[element as keyof typeof sections];
         if (!ref?.current) return false;
         const rect = ref.current.getBoundingClientRect();
-        return rect.top >= 0 && rect.bottom <= window.innerHeight;
+        return rect.top < window.innerHeight && rect.bottom > 0;
     }
 
     useEffect(() => {
@@ -48,8 +65,17 @@ export default function NavBar({sections}: NavBarProps) {
     }, [sections]);
     return (
         <div className="navBar">
-            {tabs.map((tab: Tab)=>(
-                <p onClick = {()=>{scrollToSection(tab.element)}} style={{textDecoration: (isInView(tab.element) ? "2px underline solid": "none")}}>{tab.name}</p>
+            {tabs.map((tab: Tab) => (
+                <button
+                    key={tab.element}
+                    className="navButton"
+                    onClick={() => scrollToSection(tab.element)}
+                    style={{
+                    borderBottom: activeSection === tab.element ? "2px solid gray" : "none",
+                    }}
+                >
+                    {tab.name}
+                </button>
             ))}
         </div>
     )

@@ -11,8 +11,8 @@ interface CardContentProps {
 export default function CardContent({ opened, content}: CardContentProps) {
     return (
         <div className={`card-content ${opened ? "open" : ""}`}>
-            {content.text.map((text)=>(
-                <p>{text}</p>
+            {content.text.map((text, i)=>(
+                <p key={i} dangerouslySetInnerHTML={{ __html: text }} />
             ))}
         </div>
     );

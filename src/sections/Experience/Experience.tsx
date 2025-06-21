@@ -8,8 +8,8 @@ interface ExperienceProps {
 
 export default function Experience({refProp}: ExperienceProps) {
     return (
-        <>
-            <h1 ref = {refProp}>Experience</h1>
+        <div ref = {refProp}>
+            <h1>Experience</h1>
             <div className = "cardsContainer">
                 {Object.keys(experience).map((name) => (
                     <ExperienceCard
@@ -21,6 +21,6 @@ export default function Experience({refProp}: ExperienceProps) {
                     />
                 ))}
             </div>
-        </>
+        </div>
     )
 }

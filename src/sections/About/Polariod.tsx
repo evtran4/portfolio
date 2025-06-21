@@ -7,7 +7,8 @@ import { useMemo } from "react";
 
 export default function Polariod ({image, description, index}: PolariodProps) {
     const randomTransform = useMemo(() => {
-        const translateY = Math.random() * 100 - 50;
+        // const translateY = Math.random() * 100 - 50;
+        const translateY = index % 2 == 0 ? 0: -50;
         const rotate = index % 2 == 0 ? -10: 10;
         return `translateY(${translateY}px) rotate(${rotate}deg)`;
     }, []);

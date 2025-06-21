@@ -2,6 +2,14 @@
 h1,h2, h3 p, pre {
   font-family: "Quicksand", sans-serif;;
 }
+
+.paragraphText {
+    font-family:'Quicksand', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: left;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -9,13 +17,12 @@ h1,h2, h3 p, pre {
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #EDE8D0;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 0px;
 }
 
 a {
@@ -32,8 +39,11 @@ html, body {
   width: 100%;
   height: fit-content;
   background-color: #EDE8D0;
-  padding: 0px;
-  padding-bottom: 100px;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0% 5% 0% 5%;
 }
 
 h1 {
@@ -50,25 +60,23 @@ button {
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
 }
-button:hover {
+/* button:hover {
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color: #ffffff;
   }
   a:hover {
     color: #747bff;
   }
-  button {
+  /* button {
     background-color: #f9f9f9;
-  }
+  } */
 }

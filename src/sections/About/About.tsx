@@ -6,10 +6,10 @@ interface AboutProps {
 }
 export default function About({refProp}: AboutProps) {
     return (
-        <>
-            <h1 ref = {refProp}>About Me</h1>
+        <div ref = {refProp}>
+            <h1>About Me</h1>
             {aboutMe.paragraphs.map((text)=>(
-                <p className = "aboutMeText">{text}</p>
+                <p className = "paragraphText">{text}</p>
             ))}
             <div className = "polariodGallary">
             {aboutMe.images.map((polariod: { image: string, description: string }, index: number) => (
@@ -21,6 +21,6 @@ export default function About({refProp}: AboutProps) {
                 />
             ))}
             </div>
-        </>
+        </div>
     )
 }
