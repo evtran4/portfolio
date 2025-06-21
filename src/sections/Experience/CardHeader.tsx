@@ -18,11 +18,7 @@ import mongodb from "../../../public/mongo.png"
 import postgresql from "../../../public/postgresql.webp"
 import tailwind from "../../../public/tailwind.svg"
 import DownArrow from "@mui/icons-material/ExpandMoreRounded"
-import UpArrow from "@mui/icons-material/ExpandLessRounded"
 import type { Icon } from "../../types";
-import { useState } from "react";
-
-
 
 interface CardHeaderProps {
     tools: string[],

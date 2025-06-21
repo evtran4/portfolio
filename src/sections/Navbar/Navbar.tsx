@@ -1,4 +1,4 @@
-import { useEffect, useState, type Ref, type RefObject } from 'react'
+import { useEffect, useState, type RefObject } from 'react'
 import './Navbar.css'
 import type { Tab } from '../../types'
 

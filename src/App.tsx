@@ -1,6 +1,5 @@
 import Banner from './sections/Home/Banner'
 import './App.css'
-import ExperienceCard from './sections/Experience/ExperienceCard'
 import Experience from './sections/Experience/Experience'
 import NavBar from './sections/Navbar/Navbar'
 import About from './sections/About/About'

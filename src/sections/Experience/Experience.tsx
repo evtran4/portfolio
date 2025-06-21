@@ -1,5 +1,4 @@
 import ExperienceCard from "./ExperienceCard";
-import ihsIcon from '../../../public/IHS_Icon.webp'
 import { experience } from '../../en'
 
 interface ExperienceProps {

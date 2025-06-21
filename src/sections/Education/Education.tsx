@@ -1,8 +1,8 @@
 import './Education.css'
 import { education } from '../../en';
 import shell from '../../../public/shell.png'
-import Polariod from '../About/Polariod';
-import bitcamp from '../../../public/bitcamp.jpg'
+// import Polariod from '../About/Polariod';
+// import bitcamp from '../../../public/bitcamp.jpg'
 interface EducationProps {
     refProp: React.Ref<HTMLDivElement>;
 }
