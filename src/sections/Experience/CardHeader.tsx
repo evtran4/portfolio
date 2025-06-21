@@ -126,6 +126,7 @@ export default function CardHeader({tools, title, image, opened, date}: CardHead
                 <DownArrow 
                     sx={{
                         fontSize: "60px", 
+                        color: "black",
                         transition: "0.5s", 
                         transform: (opened ? "rotate(180deg)": "none"), 
                         '&:hover': {transform: opened ? "rotate(180deg) translateY(5px)": "rotate(0deg) translateY(5px)",},
