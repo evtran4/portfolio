@@ -24,7 +24,7 @@ export const experience = {
     tools: ["React", "Node", "Firebase", "TypeScript"],
     content: {
         text: [
-          "As a Tech Lead for the Technica Fellowship Program, I had the opportunity to teach and mentor high school students in an 8-week web development bootcamp focused on React, Node.js, Firebase, and TypeScript.",
+          "As a Tech Lead for the Technica Fellowship Program, I had the opportunity to teach and mentor a group of 100 high school students in an 8-week web development bootcamp focused on React, Node.js, Firebase, and TypeScript.",
           "Each Sunday, I led 2-hour virtual classes covering topics such as React Hooks, Firebase Auth, and fullstack development workflows using curriculum from Hack4Impact’s Spring 2025 Bootcamp. I also facilitated in-class activities, answered student questions live, and adapted lessons to support students working toward their final projects.",
           "Outside of class, I helped guide students through office hours, code reviews, and debugging support as well as technical advice to help them grow more confident in their development skills.",
           "Throughout the program, I worked closely with Hack4Impact-UMD Co-Execs and Technica organizers to align workshops with student needs and ensure a supportive, engaging experience for every student."
