@@ -16,18 +16,6 @@
     animation-fill-mode: forwards;
 }
 
-.centerLabel {
-    width: 310px;
-    position: absolute;
-    top: 30px;
-    left: -98px;
-    opacity: 90%;
-    animation-name: spin;
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-}
-
 .bannerContainer {
     display: flex;
     align-items: center;
@@ -80,18 +68,14 @@
     }
 }
 
-@keyframes spin {
+@keyframes fadeFull {
     0% {
-        transform: rotate(0deg);
-    }
-    50% {
-        transform: rotate(180deg);
+        opacity: 0;
     }
     100% {
-        transform: rotate(360deg);
+        opacity: 1;
     }
 }
-
 
 @media screen and (max-width: 850px) {
     .bannerContainer {

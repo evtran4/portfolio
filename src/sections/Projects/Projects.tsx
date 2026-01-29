@@ -1,9 +1,13 @@
 import { projects } from "../../en";
 import ExperienceCard from "../Experience/ExperienceCard";
+import { useLanguage } from "../../components/LanguageContext"
+
 interface ProjectProps {
     refProp: React.Ref<HTMLDivElement>;
 }
 export default function Projects ({refProp}: ProjectProps) {
+    const { t } = useLanguage()
+    const projects = t.projects
     return (
         <div ref = {refProp}>
             <h1>Projects</h1>

@@ -1,6 +1,6 @@
 import './Education.css'
-import { education } from '../../en';
 import shell from '../../../public/shell.png'
+import { useLanguage } from '../../components/LanguageContext';
 // import Polariod from '../About/Polariod';
 // import bitcamp from '../../../public/bitcamp.jpg'
 interface EducationProps {
@@ -8,12 +8,14 @@ interface EducationProps {
 }
 
 export default function Education ({refProp}: EducationProps) {
+    const { t } = useLanguage()
+
     return (
         <div ref = {refProp}>
             <h1>Education</h1>
             <div className = "educationContainer">
                 <div className = "leftText">
-                    {education.paragraphs.map((pg, i)=>(
+                    {t.education.paragraphs.map((pg, i)=>(
                         <p className = "paragraphText" key={i} dangerouslySetInnerHTML={{ __html: pg }} />
                     ))}
                 </div>

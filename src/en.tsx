@@ -16,23 +16,15 @@ import technica from '../public/technica_icon.png'
 import terpmenu from '../public/terpmenu.jpg'
 import split from '../public/split.png'
 import shellmates from '../public/shellmates.png'
+
+export const banner = {
+  title: "Hi, I'm Evan",
+  description1: "20 year old full-stack software engineer at UMD ready to make an impact.",
+  description2: "Check out my experience and projects!"
+}
+
 export const experience = {
-  technica: {
-    title: "Tech Lead @ Technica",
-    image: technica, 
-    date: "June 2025 - Present",
-    tools: ["React", "Node", "Firebase", "TypeScript"],
-    content: {
-        text: [
-          "As a Tech Lead for the Technica Fellowship Program, I had the opportunity to teach and mentor a group of 100 high school students in an 8-week web development bootcamp focused on React, Node.js, Firebase, and TypeScript.",
-          "Each Sunday, I led 2-hour virtual classes covering topics such as React Hooks, Firebase Auth, and fullstack development workflows using curriculum from Hack4Impact’s Spring 2025 Bootcamp. I also facilitated in-class activities, answered student questions live, and adapted lessons to support students working toward their final projects.",
-          "Outside of class, I helped guide students through office hours, code reviews, and debugging support as well as technical advice to help them grow more confident in their development skills.",
-          "Throughout the program, I worked closely with Hack4Impact-UMD Co-Execs and Technica organizers to align workshops with student needs and ensure a supportive, engaging experience for every student."
-        ],
-        images: [""]
-    }
-  },
-  ihs: {
+    ihs: {
     title: "Software Engineering Intern @ IHS",
     image: ihsImage,
     date: "May 2025 - Present",
@@ -41,6 +33,21 @@ export const experience = {
         text: ["As a software engineering intern at The Institute for Humane Studies, I had the opportunity to work on the ScholarsEdge platform, which revolutionizes the ways professors, academics and scholars interact with each other and their research. Through the integration of AI tools such as a content multiplier for research paper and legislation searches, research, funding, and community building is now easier than ever for scholars.", "Working in sprints with Vue.js as the frontend framework, I wrote 3000+ lines of production code which I was able to connect to our Firebase backend and Salesforce database using Node.js. I also implemented multiple features using GCP tools such as a profile picture system with GCP Buckets.", "Alongside a few other engineers in the ScholarsEdge team, I also attended weekly standup meetings as well as participated in PRs and code reviews with GitHub."],
         images: [""]
       }
+  },
+  technica: {
+    title: "Tech Lead @ Technica",
+    image: technica, 
+    date: "June 2025 - Present",
+    tools: ["React", "Node", "Firebase", "TypeScript"],
+    content: {
+        text: [
+          "As a Tech Lead for the Technica Fellowship Program, I had the opportunity to teach and mentor a group of 15 high school students in an 8-week web development bootcamp focused on React, Node.js, Firebase, and TypeScript.",
+          "Each Sunday, I led 2-hour virtual classes covering topics such as React Hooks, Firebase Auth, and fullstack development workflows using curriculum from Hack4Impact’s Spring 2025 Bootcamp. I also facilitated in-class activities, answered student questions live, and adapted lessons to support students working toward their final projects.",
+          "Outside of class, I helped guide students through office hours, code reviews, and debugging support as well as technical advice to help them grow more confident in their development skills.",
+          "Throughout the program, I worked closely with Hack4Impact-UMD Co-Execs and Technica organizers to align workshops with student needs and ensure a supportive, engaging experience for every student."
+        ],
+        images: [""]
+    }
   },
   h4i: {
     title: "Engineer @ Hack4Impact",
@@ -162,5 +169,5 @@ export const aboutMe = {
 }
 
 export const education = {
-   paragraphs: ["I am a Junior at the University of Maryland College Park studying Computer Science.", "Throughout my 83 credits, I have maintained a <u>4.0 cummulative GPA</u> and have been recognized on the Dean's List each semester thus far.", "I have completed coding courses like Object Oriented Programming I and II where I studied core coding concepts and data structures with Java, Introduction to Computer Systems where I learned about low level mechanisms in C, Unix and Assembly, Organization of Programming Languages where I studied various types of languages features, designs, and implementation with OCaml and Rust, and Web Application Development with JavaScript where I practiced my software engineering skills.", "I have also taken Computer Science Math courses like Statistics and Probability, Linear Algebra, and Algorithms where I studied techniques for designing efficient computer algorithms and analyzed their running times."]
+   paragraphs: ["I am a Junior at the University of Maryland College Park studying Computer Science.", "Throughout my 96 credits, I have maintained a <u>4.0 cummulative GPA</u> and have been recognized on the Dean's List each semester thus far.", "I have completed coding courses like Object Oriented Programming I and II where I studied core coding concepts and data structures with Java, Introduction to Computer Systems where I learned about low level mechanisms in C, Unix and Assembly, Organization of Programming Languages where I studied various types of languages features, designs, and implementation with OCaml and Rust, and Web Application Development with JavaScript where I practiced my software engineering skills.", "I have also taken Computer Science Math courses like Statistics and Probability, Linear Algebra, and Algorithms where I studied techniques for designing efficient computer algorithms and analyzed their running times."]
 }

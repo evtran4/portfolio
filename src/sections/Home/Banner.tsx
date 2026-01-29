@@ -5,6 +5,7 @@ import type { Icon } from '../../types'
 import linkedInIcon from '../../../public/linkedinIcon.svg'
 import gmailIcon from '../../../public/gmailIcon.svg'
 import githubIcon from '../../../public/githubIcon.svg'
+import { useLanguage } from '../../components/LanguageContext'
 
 const links: Icon[] = [
     {link: "https://github.com/evtran4", imagePath: githubIcon},
@@ -12,18 +13,20 @@ const links: Icon[] = [
     { link: "mailto:evtran@terpmail.umd.edu", imagePath: gmailIcon}
 ];
 export default function Banner () {
+    const { t } = useLanguage()
+
     return (
-        <div className = "bannerContainer">
-            {/* <img className = "backgroundImage" src="/vinyl.png"></img> */}
-            {/* <img className = "centerLabel" src="/center_label.png"></img> */}
-            <img className = "profilePicture" src = {profilePicture}></img>
-            <div className = "sideContainer">
-                <div className = "textContainer">
-                    <h1>Hi, I'm Evan</h1>
-                    <p>20 year old full-stack software engineer at UMD ready to make an impact.</p>
-                    <p>Check out my experience and projects!</p>
+        <div>
+            <div className = "bannerContainer">
+                <img className = "profilePicture" src = {profilePicture}></img>
+                <div className = "sideContainer">
+                    <div className = "textContainer">
+                        <h1>{t.banner.title}</h1>
+                        <p>{t.banner.description1}</p>
+                        <p>{t.banner.description2}</p>
+                    </div>
+                    <IconGroup size={50} icons={links}></IconGroup>
                 </div>
-                <IconGroup size={50} icons={links}></IconGroup>
             </div>
         </div>
     )

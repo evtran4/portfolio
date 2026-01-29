@@ -1,18 +1,22 @@
 import './About.css'
-import { aboutMe } from '../../en';
 import Polariod from './Polariod';
+import RecordCollection from './RecordCollection/RecordCollection';
+import { useLanguage } from "../../components/LanguageContext"
+
 interface AboutProps {
     refProp: React.Ref<HTMLDivElement>;
 }
+
 export default function About({refProp}: AboutProps) {
+    const {t} = useLanguage()
     return (
         <div ref = {refProp}>
             <h1>About Me</h1>
-            {aboutMe.paragraphs.map((text)=>(
+            {t.aboutMe.paragraphs.map((text)=>(
                 <p className = "paragraphText">{text}</p>
             ))}
             <div className = "polariodGallary">
-            {aboutMe.images.map((polariod: { image: string, description: string }, index: number) => (
+            {t.aboutMe.images.map((polariod: { image: string, description: string }, index: number) => (
                 <Polariod
                     key={index}
                     image={polariod.image}
@@ -21,6 +25,7 @@ export default function About({refProp}: AboutProps) {
                 />
             ))}
             </div>
+            <RecordCollection refProp={refProp}></RecordCollection>
         </div>
     )
 }

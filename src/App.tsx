@@ -7,6 +7,7 @@ import { useRef } from 'react'
 import Resume from './sections/Resume/Resume'
 import Education from './sections/Education/Education'
 import Projects from './sections/Projects/Projects'
+import { LanguageProvider } from './components/LanguageContext'
 
 function App() {
   const experienceRef = useRef<HTMLDivElement>(null)
@@ -22,9 +23,10 @@ function App() {
     resumeHeader: resumeRef as React.RefObject<HTMLElement>,
     projectsHeader: projectsRef as React.RefObject<HTMLElement> 
   }
-  
+
   return (
     <>
+    <LanguageProvider>
       <NavBar sections = {sectionRefs}></NavBar>
       <Banner></Banner>
       <div className = "spaContainer">
@@ -34,6 +36,7 @@ function App() {
         <About refProp={aboutRef}></About>
         <Resume refProp={resumeRef} ></Resume>
       </div>
+    </LanguageProvider>
     </>
   )
 }

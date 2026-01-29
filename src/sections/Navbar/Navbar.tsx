@@ -1,6 +1,9 @@
 import { useEffect, useState, type RefObject } from 'react'
 import './Navbar.css'
-import type { Tab } from '../../types'
+import type { Language, Tab } from '../../types'
+import { useLanguage } from '../../components/LanguageContext'
+import { languages } from '../../types'
+import Settings from '@mui/icons-material/SettingsRounded';
 
 interface NavBarProps {
   sections: Record<string, RefObject<HTMLElement>>;
@@ -28,16 +31,26 @@ const tabs: Tab[] = [
         element: "resumeHeader"
     }
 ]
+
+const languageButtons: {name: string, lang:Language}[] = [
+    {name: "🇺🇸", lang: "en"},
+    {name: "🇲🇽", lang: "es"},
+    {name: "🇲🇫", lang: "fr"},
+]
+
 export default function NavBar({sections}: NavBarProps) {
+    const {setLang,lang} = useLanguage();
     const [activeSection, setActiveSection] = useState<string>("");
     const scrollToSection = (element: string) => {
     const ref = sections[element as keyof typeof sections]?.current;
-    if (ref) {
-        const yOffset = -60; 
-        const y = ref.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
-    }
+        if (ref) {
+            const yOffset = -60; 
+            const y = ref.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
     };
+
+    const [settings, setSettings] = useState(false)
 
     const isInView = (element: string) => {
         const ref = sections[element as keyof typeof sections];
@@ -65,18 +78,39 @@ export default function NavBar({sections}: NavBarProps) {
     }, [sections]);
     return (
         <div className="navBar">
-            {tabs.map((tab: Tab) => (
-                <button
-                    key={tab.element}
-                    className="navButton"
-                    onClick={() => scrollToSection(tab.element)}
-                    style={{
-                    borderBottom: activeSection === tab.element ? "2px solid gray" : "none",
-                    }}
-                >
-                    {tab.name}
-                </button>
-            ))}
+            <div className="languages" onMouseEnter={()=>{setSettings(true)}} onMouseLeave={()=>{setSettings(false)}}>
+                <Settings></Settings>
+                
+                {settings ? (
+                    <div className="languageMenu">
+                    {languageButtons.map((l) => (
+                        <button
+                            key={l.lang}
+                            className="languageButton"
+                            onClick={() => setLang(l.lang)}
+                            style={lang==l.lang ? {opacity:"100%"} : {}}
+                        >
+                        {l.name}
+                        </button>
+                    ))}
+                    </div>
+                )
+                :
+                    <></>
+                }
+            </div>
+
+            <div>
+                {tabs.map((tab: Tab) => (
+                    <button
+                        key={tab.element}
+                        className={`navButton ${activeSection === tab.element ? "active" : ""}`}
+                        onClick={() => scrollToSection(tab.element)}
+                        >
+                        {tab.name}
+                    </button>
+                ))}
+            </div>
         </div>
     )
 }
