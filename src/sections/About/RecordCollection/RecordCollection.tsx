@@ -31,6 +31,14 @@ const songs: Song[] = [
             artist: "Neutral Milk Hotel",
             album:  './nmk.jpg',
             albumName: 'In the Aeroplane Over the Sea'
+        },
+        {
+            title: "Your Song - Elton John",
+            audio: './elton.mp3',
+            image: './elton.png',
+            artist: "Elton John",
+            album:  './elton.jpg',
+            albumName: 'In the Aeroplane Over the Sea'
         }
 ]
 export default function RecordCollection ({refProp}: RecordCollectionProps) {
