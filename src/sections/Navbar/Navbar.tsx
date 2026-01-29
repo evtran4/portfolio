@@ -79,7 +79,7 @@ export default function NavBar({sections}: NavBarProps) {
     return (
         <div className="navBar">
             <div className="languages" onMouseEnter={()=>{setSettings(true)}} onMouseLeave={()=>{setSettings(false)}}>
-                <Settings></Settings>
+                <Settings sx={{color: "#BFAE9A"}}></Settings>
                 
                 {settings ? (
                     <div className="languageMenu">

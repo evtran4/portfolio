@@ -50,12 +50,12 @@ export const experience = {
     }
   },
   h4i: {
-    title: "Engineer @ Hack4Impact",
+    title: "Tech Lead, Engineer @ Hack4Impact",
     image: h4iImage, 
     date: "January 2025 - Present",
     tools: ["React", "TypeScript", "Firebase", "GCP", "Python", "Git"],
     content: {
-        text: ["As an engineer in Hack4Impact, I had the amazing opportunity to work with Food For All DC, a non-profit organization that delivers food and groceries to food insecure people around the DC area.", "Working in an engineering sprint team with a React.js frontend combined with Firebase and Python backend, I was able to help develop an application that would improve their delivery system through real-time client data management, optimized delivery routes, and a streamlined scheduling process.", "One of my favorite features that I worked on was the optimized delivery system, where I used client addresses combined with GCP's geolocation API and a Python graph algorithm to calculate optimal delivery routes for drivers, which was then displayed on a LeafletJS map of Washington DC.", "Overall the app achieved a 30% reduction in data entry time as well as 5 hours per week total saved in delivery route creation and driver assignment, allowing Food For All DC to more efficiently help over 100+ people per day", "<b>\"...Evan was one of the few engineers who received perfect ratings from all of his team members\"</b>"],
+        text: ["As an engineer in Hack4Impact, I had the amazing opportunity to work with Food For All DC, a non-profit organization that delivers food and groceries to food insecure people around the DC area.", "Working in an engineering sprint team with a React.js frontend combined with Firebase and Python backend, I was able to help develop an application that would improve their delivery system through real-time client data management, optimized delivery routes, and a streamlined scheduling process.", "One of my favorite features that I worked on was the optimized delivery system, where I used client addresses combined with GCP's geolocation API and a Python graph algorithm to calculate optimal delivery routes for drivers, which was then displayed on a LeafletJS map of Washington DC.", "Overall the app achieved a 30% reduction in data entry time as well as 5 hours per week total saved in delivery route creation and driver assignment, allowing Food For All DC to more efficiently help over 100+ people per day.", "<b>\"...Evan was one of the few engineers who received perfect ratings from all of his team members\"</b>"],
         images: [""]
     }
   },
