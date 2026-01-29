@@ -1,4 +1,3 @@
-import { projects } from "../../en";
 import ExperienceCard from "../Experience/ExperienceCard";
 import { useLanguage } from "../../components/LanguageContext"
 

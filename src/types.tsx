@@ -1,6 +1,7 @@
 import * as en from './en'
 import * as es from './es'
 import * as fr from './fr'
+import * as ch from './ch'
 
 export interface Icon {
     link: string,
@@ -26,7 +27,8 @@ export interface Song {
 export const languages = {
   en,
   es,
-  fr
+  fr,
+  ch
 }
 
 export type Language = keyof typeof languages

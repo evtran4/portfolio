@@ -2,7 +2,6 @@ import { useEffect, useState, type RefObject } from 'react'
 import './Navbar.css'
 import type { Language, Tab } from '../../types'
 import { useLanguage } from '../../components/LanguageContext'
-import { languages } from '../../types'
 import Settings from '@mui/icons-material/SettingsRounded';
 
 interface NavBarProps {
@@ -36,6 +35,7 @@ const languageButtons: {name: string, lang:Language}[] = [
     {name: "🇺🇸", lang: "en"},
     {name: "🇲🇽", lang: "es"},
     {name: "🇲🇫", lang: "fr"},
+    {name: "🇨🇳", lang: "ch"},
 ]
 
 export default function NavBar({sections}: NavBarProps) {
