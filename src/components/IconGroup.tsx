@@ -4,10 +4,9 @@ import './Components.css'
 interface IconGroupProps {
     size: number,
     icons: Icon[],
-    tooltip?: boolean
 }
 
-export default function IconGroup ({size, icons, tooltip}: IconGroupProps) {
+export default function IconGroup ({size, icons}: IconGroupProps) {
     return(
         <div className = "iconContainer">
             {icons.map((icon: Icon)=>(
