@@ -16,36 +16,32 @@ import technica from '../public/technica_icon.png'
 import terpmenu from '../public/terpmenu.jpg'
 import split from '../public/split.png'
 import shellmates from '../public/shellmates.png'
+import immuta from '../public/immuta.jpeg'
 
 export const banner = {
   title: "Hi, I'm Evan",
-  description1: "20 year old full-stack software engineer at UMD ready to make an impact.",
+  description1: "21 year old full-stack software engineer at UMD ready to make an impact.",
   description2: "Check out my experience and projects!"
 }
 
 export const experience = {
-    ihs: {
-    title: "Software Engineering Intern @ IHS",
-    image: ihsImage,
-    date: "May 2025 - Present",
-    tools: ["Vue", "Node", "GCP", "Firebase", "SQL", "Git"],
-    content: {
-        text: ["As a software engineering intern at The Institute for Humane Studies, I had the opportunity to work on the ScholarsEdge platform, which revolutionizes the ways professors, academics and scholars interact with each other and their research. Through the integration of AI tools such as a content multiplier for research paper and legislation searches, research, funding, and community building is now easier than ever for scholars.", "Working in sprints with Vue.js as the frontend framework, I wrote 3000+ lines of production code which I was able to connect to our Firebase backend and Salesforce database using Node.js. I also implemented multiple features using GCP tools such as a profile picture system with GCP Buckets.", "Alongside a few other engineers in the ScholarsEdge team, I also attended weekly standup meetings as well as participated in PRs and code reviews with GitHub."],
-        images: [""]
-      }
-  },
-  technica: {
-    title: "Tech Lead @ Technica",
-    image: technica, 
-    date: "June 2025 - Present",
-    tools: ["React", "Node", "Firebase", "TypeScript"],
+  immuta: {
+    title: "Software Engineer Intern @ Immuta",
+    image: immuta,
+    date: "May 2026 - Present",
+    tools: ["Angular", "TypeScript", "SQL", "Mastra", "Git", "PostgreSQL"],
     content: {
         text: [
-          "As a Tech Lead for the Technica Fellowship Program, I had the opportunity to teach and mentor a group of 15 high school students in an 8-week web development bootcamp focused on React, Node.js, Firebase, and TypeScript.",
-          "Each Sunday, I led 2-hour virtual classes covering topics such as React Hooks, Firebase Auth, and fullstack development workflows using curriculum from Hack4Impact’s Spring 2025 Bootcamp. I also facilitated in-class activities, answered student questions live, and adapted lessons to support students working toward their final projects.",
-          "Outside of class, I helped guide students through office hours, code reviews, and debugging support as well as technical advice to help them grow more confident in their development skills.",
-          "Throughout the program, I worked closely with Hack4Impact-UMD Co-Execs and Technica organizers to align workshops with student needs and ensure a supportive, engaging experience for every student."
-        ],
+  "At Immuta, I worked as a Software Engineering Intern on the onboarding team, helping migrate and manage data between remote platforms such as PostgreSQL, Snowflake, Databricks, and other relational database vendors and the Immuta platform through <a href='https://documentation.immuta.com/saas/developer-guides/api-intro/connections-api' target='_blank'>ConnectionsV1</a>.",
+
+  "My biggest contribution was the design and development of an assistive AI agent for Immuta's audit system. The Immuta platform tracks user activity across events ranging from data queries and policy creations to user logins. At the time, customers could only search these events manually using basic filters and pagination. While effective at smaller scales, this became impractical for enterprise customers with <b>over 100 million</b> audit events. I spent several weeks researching how AI could improve this experience and, using Mastra, AWS Bedrock, and TypeScript, built an agent that allowed users to investigate audit data through natural-language queries rather than manually navigating filters and pages.",
+
+  "After several iterations, my final architecture consisted of two agents: a Query Generator Agent (QGA) and an orchestration agent. For the QGA, I designed a YAML-based semantic model representing the audit database schema and its business context. I then built a RAG pipeline composed of tools that retrieved business definitions, field use cases, and query-generation rules from the semantic model and exposed them to the agent. This enabled the QGA to translate a natural-language prompt into a single Elasticsearch query against the audit database.",
+
+  "The orchestration agent handled more complex and investigative questions. I built a workflow around the QGA that generated and executed queries against Elasticsearch and returned the results. This workflow was exposed to the orchestration agent alongside system instructions for decomposing complex questions into smaller subqueries. The agent could then execute multiple queries, store intermediate results, and analyze them to produce a final answer. I also exposed these capabilities through an MCP server, allowing users to connect external agents such as GPT and Claude to the audit system.",
+
+  "Beyond the audit agent, I contributed to several backend and frontend improvements, including optimizing remote data-object synchronization to reduce execution time by 75%, implementing force deletion for unhealthy database connections, adding Zod schema validation before database writes, and addressing various UI issues and bugs."
+],
         images: [""]
     }
   },
@@ -56,6 +52,31 @@ export const experience = {
     tools: ["React", "TypeScript", "Firebase", "GCP", "Python", "Git"],
     content: {
         text: ["As an engineer in Hack4Impact, I had the amazing opportunity to work with Food For All DC, a non-profit organization that delivers food and groceries to food insecure people around the DC area.", "Working in an engineering sprint team with a React.js frontend combined with Firebase and Python backend, I was able to help develop an application that would improve their delivery system through real-time client data management, optimized delivery routes, and a streamlined scheduling process.", "One of my favorite features that I worked on was the optimized delivery system, where I used client addresses combined with GCP's geolocation API and a Python graph algorithm to calculate optimal delivery routes for drivers, which was then displayed on a LeafletJS map of Washington DC.", "Overall the app achieved a 30% reduction in data entry time as well as 5 hours per week total saved in delivery route creation and driver assignment, allowing Food For All DC to more efficiently help over 100+ people per day.", "<b>\"...Evan was one of the few engineers who received perfect ratings from all of his team members\"</b>"],
+        images: [""]
+    }
+  },
+  ihs: {
+    title: "Software Engineering Intern @ IHS",
+    image: ihsImage,
+    date: "May 2025 - August 2025",
+    tools: ["Vue", "Node", "GCP", "Firebase", "SQL", "Git"],
+    content: {
+        text: ["As a software engineering intern at The Institute for Humane Studies, I had the opportunity to work on the ScholarsEdge platform, which revolutionizes the ways professors, academics and scholars interact with each other and their research. Through the integration of AI tools such as a content multiplier for research paper and legislation searches, research, funding, and community building is now easier than ever for scholars.", "Working in sprints with Vue.js as the frontend framework, I wrote 3000+ lines of production code which I was able to connect to our Firebase backend and Salesforce database using Node.js. I also implemented multiple features using GCP tools such as a profile picture system with GCP Buckets.", "Alongside a few other engineers in the ScholarsEdge team, I also attended weekly standup meetings as well as participated in PRs and code reviews with GitHub."],
+        images: [""]
+      }
+  },
+  technica: {
+    title: "Tech Lead @ Technica",
+    image: technica, 
+    date: "June 2025 - August 2025",
+    tools: ["React", "Node", "Firebase", "TypeScript"],
+    content: {
+        text: [
+          "As a Tech Lead for the Technica Fellowship Program, I had the opportunity to teach and mentor a group of 15 high school students in an 8-week web development bootcamp focused on React, Node.js, Firebase, and TypeScript.",
+          "Each Sunday, I led 2-hour virtual classes covering topics such as React Hooks, Firebase Auth, and fullstack development workflows using curriculum from Hack4Impact’s Spring 2025 Bootcamp. I also facilitated in-class activities, answered student questions live, and adapted lessons to support students working toward their final projects.",
+          "Outside of class, I helped guide students through office hours, code reviews, and debugging support as well as technical advice to help them grow more confident in their development skills.",
+          "Throughout the program, I worked closely with Hack4Impact-UMD Co-Execs and Technica organizers to align workshops with student needs and ensure a supportive, engaging experience for every student."
+        ],
         images: [""]
     }
   },
@@ -70,15 +91,15 @@ export const experience = {
     }
   },
   freelance: {
-    title: "Freelance Software Developer @ Honey Pig BBQ",
+    title: "Freelance Software Developer @ Kippo Ramen | Honey Pig BBQ | Micky's Soju House",
     image: honeyPig,
     date: "February 2023 - August 2024",
-    tools: ["React", "HTML", "JavaScript"],
+    tools: ["React", "HTML", "TypeScript", "JavaScript"],
     content: {
         text: ["As a Host and Server at Honey Pig KBBQ, I noticed many flaws about the seating system. Information about which tables were taken, how many customers each server had, and which employees were working were all kept track of through an outdated an inefficient paper and pencil system, leading to worse experiences for both customers and employees.", "Passionate about software, I naturally wanted to come up with a solution. My first freelancing project a Restaurant Management System built using HTML, CSS, and JavaScript to keep track of which tables were taken, how many customers each server had, and which servers were working each day. It was adopted by all of the hosts at the reasturant, saving over an hour per day in data management and reducing employee mistakes, leading to a better dining experience for customers as well as easier tasks for employees.", "Later, I was asked to help develop the website for their new bar Micky's Soju House, where I used React.js to create an interactive menu website that would best showcase their food and drinks, helping to increase their online presence and grow their business."],
         images: [""]
     }
-  }
+  },
 }
 
 export const projects = {
@@ -89,7 +110,7 @@ export const projects = {
     tools: ["React", "TypeScript", "FastAPI", "Python", "MongoDB"],
     content: {
         text: [
-                "Bill Splitting App"
+                "An app that allows you to connect with friends and easily split bills by snapping a photo.", "It uses OCR to detect item names and prices, and allows the group to select their own items or split evenly."
               ],
         images: [""]
       }
@@ -115,7 +136,7 @@ export const projects = {
     tools: ["React", "TypeScript", "FastAPI", "Python", "MongoDB"],
     content: {
         text: [
-                "Dating app"
+                "A UMD-exlusive dating app authenticated by Terpmail, allowing users to swipe, match, and chat."
               ],
         images: [""]
       }
@@ -169,5 +190,8 @@ export const aboutMe = {
 }
 
 export const education = {
-   paragraphs: ["I am a Junior at the University of Maryland College Park studying Computer Science.", "Throughout my 96 credits, I have maintained a <u>4.0 cummulative GPA</u> and have been recognized on the Dean's List each semester thus far.", "I have completed coding courses like Object Oriented Programming I and II where I studied core coding concepts and data structures with Java, Introduction to Computer Systems where I learned about low level mechanisms in C, Unix and Assembly, Organization of Programming Languages where I studied various types of languages features, designs, and implementation with OCaml and Rust, and Web Application Development with JavaScript where I practiced my software engineering skills.", "I have also taken Computer Science Math courses like Statistics and Probability, Linear Algebra, and Algorithms where I studied techniques for designing efficient computer algorithms and analyzed their running times."]
+   paragraphs: ["I am a Senior at the University of Maryland in College Park studying Computer Science.", 
+    "Throughout my 108 credits, I have maintained a <u>4.0 cummulative GPA</u> and have been recognized on the Dean's List each semester thus far.", 
+    "I have completed CS courses like Database Design with Dr. Abadi, Computer Networks with  Object Oriented Programming I and II where I studied core coding concepts and data structures with Java, Introduction to Computer Systems where I learned about low level mechanisms in C, Unix and Assembly, Organization of Programming Languages where I studied various types of languages features, designs, and implementation with OCaml and Rust, and Web Application Development with JavaScript where I practiced my software engineering skills.", 
+    "I have also taken Computer Science Math courses like Statistics and Probability, Linear Algebra, and Algorithms where I studied techniques for designing efficient computer algorithms and analyzed their running times."]
 }

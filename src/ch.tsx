@@ -16,6 +16,7 @@ import technica from '../public/technica_icon.png'
 import terpmenu from '../public/terpmenu.jpg'
 import split from '../public/split.png'
 import shellmates from '../public/shellmates.png'
+import immuta from '../public/immuta.jpeg'
 
 export const banner = {
   title: "你好，我是Evan",
@@ -24,6 +25,26 @@ export const banner = {
 }
 
 export const experience = {
+  immuta: {
+    title: "软件工程实习生 @ Immuta",
+    image: immuta,
+    date: "May 2026 - Present",
+    tools: ["Angular", "TypeScript", "SQL", "Mastra", "Git", "PostgreSQL"],
+    content: {
+        text: [
+  "在 Immuta，我作为软件工程实习生加入 onboarding 团队，负责协助通过 <a href='https://documentation.immuta.com/saas/developer-guides/api-intro/connections-api' target='_blank'>ConnectionsV1</a> 在 Immuta 平台与 PostgreSQL、Snowflake、Databricks 以及其他关系型数据库供应商等远程平台之间迁移和管理数据。",
+
+  "我最大的贡献是为 Immuta 的审计系统设计并开发了一个 AI 辅助代理。Immuta 平台会记录用户的各种活动，包括数据查询、策略创建以及用户登录等事件。当时，客户只能通过基础筛选器和分页功能手动搜索这些事件。虽然这种方式在较小的数据规模下仍然有效，但对于拥有<b>超过 1 亿条</b>审计事件的企业客户而言，这种方式变得几乎无法实际使用。我花了数周时间研究如何利用 AI 改善这一体验，并使用 Mastra、AWS Bedrock 和 TypeScript 构建了一个代理，使用户能够通过自然语言查询来调查审计数据，而无需手动浏览筛选器和页面。",
+
+  "经过多次迭代，我最终的架构由两个代理组成：Query Generator Agent (QGA) 和一个编排代理。对于 QGA，我设计了一个基于 YAML 的语义模型，用于表示审计数据库的 schema 及其业务上下文。随后，我构建了一个 RAG pipeline，其中包含多个工具，可以从语义模型中检索业务定义、字段使用场景以及查询生成规则，并将这些信息提供给代理。这使 QGA 能够将自然语言提示转换为针对审计数据库执行的单条 Elasticsearch 查询。",
+
+  "编排代理用于处理更加复杂且需要调查分析的问题。我围绕 QGA 构建了一个 workflow，用于生成 Elasticsearch 查询、执行查询并返回结果。该 workflow 与相应的系统指令一起提供给编排代理，使其能够将复杂问题拆解成更小的子查询。代理随后可以执行多个查询、存储中间结果，并对这些结果进行分析以生成最终答案。我还通过 MCP server 暴露了这些功能，使用户能够将 GPT、Claude 等外部代理连接到审计系统。",
+
+  "除了审计代理之外，我还参与了多项 backend 和 frontend 改进，包括优化远程数据对象同步，将执行时间缩短 75%；为不健康的数据库连接实现强制删除功能；在写入数据库前加入 Zod schema 验证；以及修复各种 UI 问题和 bugs。"
+],
+        images: [""]
+    }
+  },
     ihs: {
     title: "软件工程实习生 @ IHS",
     image: ihsImage,

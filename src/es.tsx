@@ -16,6 +16,7 @@ import technica from '../public/technica_icon.png'
 import terpmenu from '../public/terpmenu.jpg'
 import split from '../public/split.png'
 import shellmates from '../public/shellmates.png'
+import immuta from '../public/immuta.jpeg'
 
 export const banner = {
   title: "Hola, soy Evan",
@@ -24,6 +25,26 @@ export const banner = {
 }
 
 export const experience = {
+  immuta: {
+    title: "Pasante de Ingeniería de Software @ Immuta",
+    image: immuta,
+    date: "May 2026 - Present",
+    tools: ["Angular", "TypeScript", "SQL", "Mastra", "Git", "PostgreSQL"],
+    content: {
+        text: [
+  "En Immuta, trabajé como pasante de Ingeniería de Software en el equipo de onboarding, ayudando a migrar y gestionar datos entre plataformas remotas como PostgreSQL, Snowflake, Databricks y otros proveedores de bases de datos relacionales y la plataforma de Immuta a través de <a href='https://documentation.immuta.com/saas/developer-guides/api-intro/connections-api' target='_blank'>ConnectionsV1</a>.",
+
+  "Mi mayor contribución fue el diseño y desarrollo de un agente de IA asistivo para el sistema de auditoría de Immuta. La plataforma de Immuta registra la actividad de los usuarios en eventos que van desde consultas de datos y creación de políticas hasta inicios de sesión. En ese momento, los clientes solo podían buscar estos eventos manualmente utilizando filtros básicos y paginación. Aunque este método era efectivo a menor escala, se volvía poco práctico para clientes empresariales con <b>más de 100 millones</b> de eventos de auditoría. Pasé varias semanas investigando cómo la IA podía mejorar esta experiencia y, utilizando Mastra, AWS Bedrock y TypeScript, desarrollé un agente que permitía a los usuarios investigar datos de auditoría mediante consultas en lenguaje natural en lugar de navegar manualmente por filtros y páginas.",
+
+  "Después de varias iteraciones, mi arquitectura final consistió en dos agentes: un Query Generator Agent (QGA) y un agente de orquestación. Para el QGA, diseñé un modelo semántico basado en YAML que representaba el esquema de la base de datos de auditoría y su contexto empresarial. Luego desarrollé un pipeline RAG compuesto por herramientas que recuperaban definiciones de negocio, casos de uso de campos y reglas para la generación de consultas a partir del modelo semántico y las ponían a disposición del agente. Esto permitió al QGA convertir una consulta en lenguaje natural en una única consulta de Elasticsearch contra la base de datos de auditoría.",
+
+  "El agente de orquestación se encargaba de preguntas más complejas y de investigación. Desarrollé un workflow alrededor del QGA que generaba y ejecutaba consultas en Elasticsearch y devolvía los resultados. Este workflow se expuso al agente de orquestación junto con instrucciones de sistema para descomponer preguntas complejas en subconsultas más pequeñas. El agente podía entonces ejecutar múltiples consultas, almacenar resultados intermedios y analizarlos para generar una respuesta final. También expuse estas capacidades mediante un servidor MCP, permitiendo a los usuarios conectar agentes externos como GPT y Claude al sistema de auditoría.",
+
+  "Además del agente de auditoría, contribuí a varias mejoras de backend y frontend, incluyendo la optimización de la sincronización de objetos de datos remotos para reducir el tiempo de ejecución en un 75%, la implementación de eliminación forzada para conexiones de bases de datos no saludables, la incorporación de validación de esquemas con Zod antes de escribir en la base de datos y la resolución de diversos problemas de UI y bugs."
+],
+        images: [""]
+    }
+  },
   ihs: {
     title: "Practicante de Ingeniería de Software @ IHS",
     image: ihsImage,

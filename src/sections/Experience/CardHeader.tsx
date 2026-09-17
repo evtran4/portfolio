@@ -18,6 +18,9 @@ import mongodb from "../../../public/mongo.png"
 import postgresql from "../../../public/postgresql.webp"
 import tailwind from "../../../public/tailwind.svg"
 import DownArrow from "@mui/icons-material/ExpandMoreRounded"
+import angular from '../../../public/angular.png'
+import mastra from '../../../public/mastra.svg'
+
 import type { Icon } from "../../types";
 
 interface CardHeaderProps {
@@ -102,6 +105,14 @@ export default function CardHeader({tools, title, image, opened, date}: CardHead
             case "MongoDB":
                 imagePath = mongodb
                 link = "https://www.mongodb.com/"
+            break;
+            case "Angular":
+                imagePath= angular
+                link = "https://angular.dev/"
+            break;
+            case "Mastra":
+                imagePath= mastra
+                link = "https://mastra.ai/"
             break;
             default:
             imagePath = "";

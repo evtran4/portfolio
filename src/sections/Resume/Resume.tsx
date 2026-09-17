@@ -10,7 +10,7 @@ export default function Resume ({refProp}: ResumeProps) {
             <div className = "center">
                 <h1>Resume</h1>
             </div>
-            <iframe src = "https://docs.google.com/document/d/1C_ay8ABAWFfyUuGT4M1pgsuLsKx78ZFBJWJDWSV0yr8/preview"></iframe>
+            <iframe src = "https://drive.google.com/file/d/1rqJYuWA4F6lPKhLKvv0J-p_ZxGt02BF_/preview?tab=t.0"></iframe>
         </div>
     )
 }
